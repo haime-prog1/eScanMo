@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-fit=cover lets us draw under the iPhone notch / home bar; we
+       then pad content with env(safe-area-inset-*) in CSS. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0f6b5c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="eScanMo" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+  <title>eScanMo</title>
+</head>
+<body>
+  <div id="app">
+    <main id="view"></main>
+    <nav id="tabbar" aria-label="Main">
+      <button data-tab="home"><span class="ico">⌂</span><span>Home</span></button>
+      <button data-tab="scan"><span class="ico">◉</span><span>Scan</span></button>
+      <button data-tab="tools"><span class="ico">✦</span><span>Tools</span></button>
+      <button data-tab="settings"><span class="ico">⚙</span><span>Settings</span></button>
+    </nav>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
